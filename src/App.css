@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/* Mengatur box-sizing untuk semua elemen agar termasuk padding dan border dalam perhitungan lebar dan tinggi */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Mengatur gaya umum untuk kontainer aplikasi */
+.app {
+  width: 415px; /* Lebar kontainer aplikasi */
+  margin: 0 auto; /* Pusatkan kontainer aplikasi secara horizontal */
+  background-color: #fff; /* Warna latar belakang */
+  border: 1px solid #eee; /* Garis tepi */
+  min-height: 100vh; /* Set tinggi minimum menjadi 100% dari tinggi viewport */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* Mengatur gaya responsif untuk layar berukuran kecil */
+@media (max-width: 415px) {
+  .app {
+    width: 100%; /* Ubah lebar kontainer menjadi 100% untuk layar kecil */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Mengatur gaya untuk merek atau judul situs */
+.brand {
+  text-align: center; /* Pusatkan teks */
+  font-size: 24px; /* Ukuran font */
+  font-weight: 600; /* Ketebalan font */
+  padding: 20px 0; /* Ruang di sekitar judul */
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Mengatur gaya untuk navigasi situs */
+.nav {
+  border-top: 1px solid #eee; /* Garis atas */
+  border-bottom: 1px solid #eee; /* Garis bawah */
+  display: flex; /* Tampilkan item secara berdampingan */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Mengatur gaya untuk setiap item navigasi */
+.nav-item {
+  display: inline-block; /* Tampilkan dalam satu baris */
+  flex: 1 1 0; /* Bagi ruang secara merata */
+  text-align: center; /* Pusatkan teks */
+  padding: 10px 0; /* Ruang di sekitar teks */
+  color: #000; /* Warna teks */
+  text-decoration: none; /* Hapus garis bawah */
+  font-size: 14px; /* Ukuran font */
+  border: 1px solid #000; /* Garis tepi */
+}
+
+
+/* Mengatur gaya untuk item navigasi kecuali yang terakhir */
+.nav-item:not(:last-child) {
+  border-right: 1px solid #eee; /* Garis kanan */
+}
+
+
+/* Mengatur gaya untuk bagian konten atau section */
+.section {
+  padding: 30px; /* Ruang di dalam bagian */
+}
+
+
+/* Mengatur gaya untuk judul bagian */
+.section-title {
+  margin-top: 0; /* Hilangkan margin atas */
+}
+
+
+/* Mengatur gaya untuk deskripsi bagian */
+.section-description {
+  line-height: 24px; /* Tinggi baris */
+}
+
+
+/* Mengatur gaya untuk daftar artikel */
+.articles {
+  border-top: 1px solid #d3d3d3; /* Garis atas */
+}
+
+
+/* Mengatur gaya untuk judul artikel */
+.articles-title {
+  margin-top: 0; /* Hilangkan margin atas */
+}
+
+
+/* Mengatur gaya untuk tautan judul artikel */
+.articles-title a {
+  color: #000; /* Warna teks */
+  text-decoration: none; /* Hapus garis bawah */
+}
+
+
+/* Mengatur gaya untuk tautan judul artikel saat dihover */
+.articles-title a:hover {
+  color: blue; /* Warna teks saat dihover */
+}
+
+
+/* Mengatur gaya untuk waktu publikasi artikel */
+.articles-time {
+  color: #999; /* Warna teks abu-abu */
+  font-size: 12px; /* Ukuran font */
+}
+
+
+/* Mengatur gaya untuk gambar artikel */
+.articles-image {
+  max-width: 100%; /* Lebar maksimum gambar */
+  margin: 30px 0; /* Ruang di atas dan di bawah gambar */
+}
+
+
+/* Mengatur gaya untuk ringkasan artikel */
+.article-summary {
+  line-height: 26px; /* Tinggi baris */
+  margin-top: 0; /* Hilangkan margin atas */
+}
+
+
+/* Mengatur gaya untuk sumber artikel */
+.article-source {
+  color: #999; /* Warna teks abu-abu */
 }
